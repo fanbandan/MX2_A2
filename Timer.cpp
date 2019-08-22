@@ -36,7 +36,7 @@ int Delay_MS(int ms_delay) {
 
 ISR (TIMER2_COMPB_vect) {
 	MillisecondCounter += 2;
-	MS_Delay++;
+	MS_Delay += 2;
 	if (MillisecondCounter >= 1000) {
 		MillisecondCounter = 0;
 		SecondCounter++;
