@@ -105,6 +105,8 @@ void Stepper_Motor_Link_Move() {
 
 	if (LinkStep == SingleStepsCount) {
 		//Do nothing at position
+		//Delay and return
+		Delay_MS(StepDelay);
 		return;
 	}
 	if (LinkStep < SingleStepsCount) {
